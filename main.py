@@ -8,11 +8,11 @@ sheet = service_account.open("PDF Task")
 workSheet = sheet.worksheet("Form Responses 1")
 lastRowChecked = int(workSheet.acell("CL1").value)
 rowToCheck = lastRowChecked + 1
-rowValues = workSheet.row_values(rowToCheck)
 count = 0
 
 while True:
     try:
+        rowValues = workSheet.row_values(rowToCheck)
         while rowValues:
             print(rowValues)
 
